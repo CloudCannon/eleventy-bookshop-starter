@@ -1,0 +1,28 @@
+---
+permalink: /
+content_blocks:
+  # An example of using bookshop via array structures.
+  # On CloudCannon, these structures are configured automatically for you.
+  # To follow this array being rendered, see layouts/default.liquid
+  - _bookshop_name: hero
+    title: Bookshop Eleventy Starter
+    content_html: >-
+      <p>A skeleton for getting started with your component journey using Bookshop and Eleventy.</p>
+    tags:
+      - text: "bookshop"
+      - text: "eleventy"
+  - _bookshop_name: content
+    content_html: >-
+      <p>For more info, check out the <a href="https://github.com/CloudCannon/eleventy-bookshop-starter#readme" target="_blank">readme</a></p>
+    type: standard
+note_html: >-
+  <p>You can also use the bookshop tag directly.</p>
+---
+
+{% comment %}
+  # An example of using the bookshop tag directly,
+  # as you would use an include in standard liquid.
+  # Components are referenced by component name,
+  # rather than a fully qualified path.
+{% endcomment %}
+{% bookshop "content" content_html: note_html type: 'note' %}

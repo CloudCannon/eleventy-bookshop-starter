@@ -1,0 +1,37 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %}
+        # The `bookshop-sass` command in package.json compiles all bookshop styles
+        # to this location before the Eleventy build.
+        # This includes running any postcss configuration in your working directory.
+    {% endcomment %}
+    <link rel="stylesheet" href="/assets/bookshop.css">
+    <title>Eleventy Bookshop Starter</title>
+</head>
+<body>
+    <main>
+        {% comment %}
+            # The `page` include loops through all content_blocks and renders them.
+            # Using a bookshop tag here means that live previewing will catch new components.
+        {% endcomment %}
+        {% bookshop_include "page" content_blocks: content_blocks %}
+
+        {% comment %}
+            # Render any additional page content below the page content blocks.
+        {% endcomment %}
+        {{ content }}
+    </main>
+
+    {% comment %}
+        # This tag registers live previewing on CloudCannon.
+        # The script path matches the `bookshop-live` command in package.json.
+    {% endcomment %}
+    {% bookshop_live _cloudcannon/bookshop-live.js %}
+</body>
+</html>

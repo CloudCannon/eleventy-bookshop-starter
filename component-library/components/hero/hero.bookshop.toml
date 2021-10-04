@@ -1,0 +1,16 @@
+[component]
+structures = [ "content_blocks" ]
+label = "Hero"
+description = "Main page hero block"
+icon = "title"
+tags = ["Hero", "WYSIWYG"]
+
+[props]
+title = "Bookshop Eleventy Starter" #: Main page h1
+content_html = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>" #: Optional
+
+[[props.tags]]
+text = "Bookshop"
+
+[[props.tags]]
+text = "Components"

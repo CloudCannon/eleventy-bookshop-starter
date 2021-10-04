@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+npm install
+npm run bookshop-live
+npm run bookshop-hosted
+npm run build:bookshop-sass
+
+echo "📚 ✅ : Prebuild script finished"

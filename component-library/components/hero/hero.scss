@@ -1,0 +1,10 @@
+.c-title {
+    &__title {
+        margin: var(--16-25) 0 var(--10-20);
+        font-size: var(--heading-size);
+    }
+
+    .c-tag {
+        margin: 4px var(--2-6);
+    }
+}

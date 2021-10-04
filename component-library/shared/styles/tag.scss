@@ -1,0 +1,16 @@
+// All sass files in the styles folder get imported automatically :-)
+.u-tag {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 var(--5-7);
+    height: var(--18-22);
+
+    font-size: var(--8-10);
+    font-weight: bold;
+
+    border: solid 2px var(--foreground);
+    border-left-width: var(--8-12);
+    border-left-style: solid;
+    border-radius: 4px;
+}

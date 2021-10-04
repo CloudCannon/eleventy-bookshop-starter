@@ -1,0 +1,11 @@
+[component]
+structures = [ "content_blocks" ]
+label = "Content"
+description = "Generic rich content area"
+icon = "wysiwyg"
+tags = ["Text"]
+
+[props]
+content_html = "<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>"
+type.select = ["standard", 'note']
+type.default = "standard"

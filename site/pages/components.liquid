@@ -1,0 +1,30 @@
+---
+published: false
+permalink: /components/
+---
+
+{% comment %}
+    # NB: None of the tags on this page are required for a production build
+    # of your website. They serve only to power the component browser
+    # interface that Bookshop provides.
+{% endcomment %}
+
+{% if site.env == "production" %}
+
+    {% comment %}
+        # When running in production, `bookshop-hosted` in package.json
+        # builds a static hosted version of your component browser
+        # to the following path.
+    {% endcomment %}
+    {% bookshop_browser /assets/bookshop-hosted.js %}
+
+{% else %}
+
+    {% comment %}
+        # When running locally, `bookshop-dev` in package.json
+        # hosts a local webserver that powers your component browser
+        # and enables hot-reloading withing the component browser.
+    {% endcomment %}
+    {% bookshop_browser :6061 %}
+
+{% endif %}

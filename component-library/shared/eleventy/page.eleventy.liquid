@@ -1,0 +1,14 @@
+{% comment %}
+    # This this include is used on pages where an array structure
+    # is used to build the page on CloudCannon, and you want to enable
+    # live previewing of new components as they are added. 
+    # This component expects a property "content_blocks"
+    # to be passed that is an array of bookshop components.
+{% endcomment %}
+{% for block in content_blocks %}
+    {% comment %} 
+        # The bind parameter here passes the inner fields of block to the component.
+        # Imagine it like the ...spread operator in JavaScript.
+    {% endcomment %}
+    {% bookshop "{{block._bookshop_name}}" bind: block %}
+{% endfor %}

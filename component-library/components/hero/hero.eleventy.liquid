@@ -1,0 +1,11 @@
+<div class="c-title">
+    {% for tag in tags %}
+        {% bookshop_include "tag" bind: tag %}
+    {% endfor %}
+    <h1 class="c-title__title">
+        {{ title }}
+    </h1>
+    {% if content_html %}
+        {% bookshop "content" content_html: content_html %}
+    {% endif %}
+</div>
