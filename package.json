@@ -4,7 +4,7 @@
   "description": "A starter template for Eleventy with Bookshop",
   "scripts": {
     "bookshop-dev": "bookshop-browser -b component-library -p 6061",
-    "bookshop-hosted": "bookshop-browser -b component-library -o site/bookshop-hosted.js",
+    "bookshop-hosted": "bookshop-browser -b component-library -o site/assets/bookshop-hosted.js",
     "bookshop-live": "bookshop-live -b component-library -o site/_cloudcannon/bookshop-live.js",
     "build:bookshop-sass": "bookshop-sass -b component-library -o site/assets/bookshop.css",
     "build:eleventy": "eleventy",
