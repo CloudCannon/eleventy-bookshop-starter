@@ -9,7 +9,7 @@
     "build:bookshop-sass": "bookshop-sass -b component-library -o site/assets/bookshop.css",
     "build:eleventy": "eleventy",
     "watch:bookshop-sass": "bookshop-sass -b component-library -o site/assets/bookshop.css -w",
-    "watch:eleventy": "eleventy --serve",
+    "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
     "start": "npm-run-all build:bookshop-sass --parallel watch:bookshop-sass bookshop-dev watch:eleventy"
   },
   "repository": {
