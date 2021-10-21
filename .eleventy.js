@@ -3,6 +3,8 @@ const pluginCloudCannonBookshop = require("@bookshop/cloudcannon-eleventy-booksh
 
 module.exports = function (eleventyConfig) {
 
+	eleventyConfig.htmlTemplateEngine = "liquid";
+
 	eleventyConfig.addPlugin(pluginBookshop({
 		bookshopLocations: ["component-library"]
 	}));
