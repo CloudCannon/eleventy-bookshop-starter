@@ -32,6 +32,7 @@
         # This tag registers live previewing on CloudCannon.
         # The script path matches the `bookshop-live` command in package.json.
     {% endcomment %}
+    <script>window.bookshopLiveOptions = { editorLinks: true };</script>
     {% bookshop_live _cloudcannon/bookshop-live.js %}
 </body>
 </html>
