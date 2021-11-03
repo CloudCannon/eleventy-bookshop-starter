@@ -3,14 +3,14 @@
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
-    padding: 0 var(--5-7);
-    height: var(--18-22);
+    padding: 0 6px;
+    height: 20px;
 
-    font-size: var(--8-10);
+    font-size: 10px;
     font-weight: bold;
 
     border: solid 2px var(--foreground);
-    border-left-width: var(--8-12);
+    border-left-width: 10px;
     border-left-style: solid;
     border-radius: 4px;
 }
