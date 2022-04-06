@@ -1,4 +1,4 @@
 <div class="c-content c-content--{{ type }}">
-    {% if type == "note" %}{% bookshop_include "tag" text: "Note" %}{% endif %}
+    {% if type == "note" %}{% bookshop "tag" text: "Note" %}{% endif %}
     {{ content_html }}
 </div>
