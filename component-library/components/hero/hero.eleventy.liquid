@@ -5,7 +5,7 @@
     <h1 class="c-title__title">
         {{ title }}
     </h1>
-    {% if content_html %}
-        {% bookshop "content" content_html: content_html %}
+    {% if content %}
+        {% bookshop "content" bind: content %}
     {% endif %}
 </div>
