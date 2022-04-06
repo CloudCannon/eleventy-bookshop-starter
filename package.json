@@ -3,32 +3,29 @@
   "private": true,
   "description": "A starter template for Eleventy with Bookshop",
   "scripts": {
-    "bookshop-dev": "bookshop-browser -b component-library -p 6061",
-    "bookshop-hosted": "bookshop-browser -b component-library -o site/assets/bookshop-hosted.js",
-    "bookshop-live": "bookshop-live -b component-library -o site/_cloudcannon/bookshop-live.js",
-    "build:bookshop-sass": "bookshop-sass -b component-library -o site/assets/bookshop.css",
-    "build:eleventy": "eleventy",
-    "watch:bookshop-sass": "bookshop-sass -b component-library -o site/assets/bookshop.css -w",
-    "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
-    "start": "npm-run-all build:bookshop-sass --parallel watch:bookshop-sass bookshop-dev watch:eleventy"
+    "bookshop:watch": "bookshop-browser",
+    "bookshop-sass:build": "bookshop-sass -b component-library -o site/assets/bookshop.css",
+    "bookshop-sass:watch": "bookshop-sass -b component-library -o site/assets/bookshop.css -w",
+    "eleventy:build": "eleventy",
+    "eleventy:watch": "ELEVENTY_ENV=development eleventy --serve",
+    "start": "npm-run-all bookshop-sass:build --parallel bookshop-sass:watch bookshop:watch eleventy:watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CloudCannon/eleventy-bookshop-starter.git"
   },
-  "author": "",
+  "author": "CloudCannon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CloudCannon/eleventy-bookshop-starter/issues"
   },
   "homepage": "https://github.com/CloudCannon/eleventy-bookshop-starter#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.8",
+    "@11ty/eleventy": "^1.0.0",
     "@bookshop/browser": "3.0.0-beta.7",
-    "@bookshop/cloudcannon-eleventy-bookshop": "^2.2.2",
     "@bookshop/eleventy-bookshop": "3.0.0-beta.7",
     "@bookshop/eleventy-engine": "3.0.0-beta.7",
-    "@bookshop/live": "3.0.0-beta.7",
+    "@bookshop/generate": "3.0.0-beta.7",
     "@bookshop/sass": "3.0.0-beta.7",
     "npm-run-all": "^4.1.5"
   }
