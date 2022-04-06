@@ -1,0 +1,32 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Hero
+  description: Main page hero block
+  icon: title
+  tags:
+    - Hero
+    - WYSIWYG
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: ""
+  content_html: ""
+  tags:
+    - text: ""
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+  title: Bookshop Eleventy Starter
+  content_html: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  tags:
+    - text: Bookshop
+    - text: Components
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    comment: Main page h1
+  content_html:
+    comment: Optional
