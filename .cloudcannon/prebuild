@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 npm i
-npm run build:bookshop-sass
+npm run bookshop-sass:build
