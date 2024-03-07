@@ -1,0 +1,174 @@
+paths:
+  data: data
+  collections: content
+  includes: layouts
+  layouts: layouts
+  static: static
+  uploads: static/uploads
+  source: ''
+  archetypes: archetypes
+  assets: assets
+  content: content
+  pages: content
+  publish: public
+  config: ''
+collections_config:
+  pages:
+    path: content
+    output: true
+    filter: strict
+    parse_branch_index: true
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+_enabled_editors:
+  - visual
+  - content
+_structures:
+  content_blocks:
+    style: select
+    id_key: _bookshop_name
+    values:
+      - value:
+          _bookshop_name: columns
+          num_cols:
+          columns:
+            - name:
+              col_span:
+              backgroundImage:
+              column_components: []
+        label: Multiple Columns
+        description: >-
+          Layout component to allow Multiple columns in the same section.
+          Columns contain other components.
+        icon: view_column
+        tags:
+          - layout
+        _inputs:
+          num_cols:
+            type: range
+            options:
+              min: 1
+              max: 4
+              step: 1
+            label: Number of Columns
+            comment: >-
+              The total number of columns for this component. If empty, will
+              default to the number of column entries defined below.
+            cascade: true
+          columns:
+            type: array
+            cascade: true
+            icon: splitscreen_left
+          name:
+            type: text
+            label: Column Name
+            comment: For easy reference of what is in each column.
+            cascade: true
+          sectionclass:
+            type: text
+            label: Section Classes
+            comment: >-
+              Space separated Tailwind CSS classes that are added to the
+              'section' element.
+            cascade: true
+          col_span:
+            type: number
+            label: Columns Spanned
+            comment: >-
+              By default each column entry spans a single column. You can change
+              that here.
+            cascade: true
+          backgroundImage:
+            type: image
+            comment: Background image for the column.
+            cascade: true
+          column_components:
+            type: array
+            options:
+              structures: _structures.content_blocks
+            label: Column Components
+            comment: Stack of components in the column.
+            cascade: true
+            icon: splitscreen_top
+      - value:
+          _bookshop_name: content
+          content_html: ''
+          type: standard
+        label: Content
+        description: Generic rich content area
+        icon: wysiwyg
+        tags:
+          - Text
+        _inputs:
+          type:
+            type: select
+            options:
+              allow_empty: true
+              values:
+                - standard
+                - note
+            cascade: true
+      - value:
+          _bookshop_name: hero
+          title: Hello World!
+          content:
+          tags: []
+        label: Hero
+        description: Main page hero block
+        icon: title
+        tags:
+          - Hero
+          - WYSIWYG
+        _inputs:
+          title:
+            type: auto
+            comment: Main page h1
+            cascade: true
+          content:
+            type: object
+            options:
+              structures: _structures._bookshop_single_component_content
+            cascade: true
+          tags:
+            type: array
+            options:
+              structures: _structures._bookshop_single_component_tag
+            cascade: true
+  _bookshop_single_component_content:
+    style: select
+    id_key: _bookshop_name
+    values:
+      - value:
+          _bookshop_name: content
+          content_html: ''
+          type: standard
+        label: Content
+        description: Generic rich content area
+        icon: wysiwyg
+        tags:
+          - Text
+        _inputs:
+          type:
+            type: select
+            options:
+              allow_empty: true
+              values:
+                - standard
+                - note
+            cascade: true
+  _bookshop_single_component_tag:
+    style: select
+    id_key: _bookshop_name
+    values:
+      - value:
+          _bookshop_name: tag
+          text: Tag
+        label: Tag
+        description: A tag subcomponent
+        icon: smart_button
+        tags: []
+        _inputs:
+data_config: {}
+timezone: Etc/UTC
