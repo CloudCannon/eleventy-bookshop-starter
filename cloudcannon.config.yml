@@ -17,7 +17,7 @@ collections_config:
     path: content
     output: true
     filter: strict
-    parse_branche_index:
+    parse_branch_index: true
     icon: notes
     disable_add: false
     disable_add_folder: false
@@ -41,7 +41,7 @@ _structures:
         label: Multiple Columns
         description: >-
           Layout component to allow Multiple columns in the same section.
-          Columns contain other components
+          Columns contain other components.
         icon: view_column
         tags:
           - layout
@@ -55,7 +55,7 @@ _structures:
             label: Number of Columns
             comment: >-
               The total number of columns for this component. If empty, will
-              defailt to the number of column entries defined below.
+              default to the number of column entries defined below.
             cascade: true
           columns:
             type: array
@@ -64,32 +64,32 @@ _structures:
           name:
             type: text
             label: Column Name
-            commment: For easy reference of what is in each column. 
+            comment: For easy reference of what is in each column.
             cascade: true
           sectionclass:
             type: text
             label: Section Classes
             comment: >-
               Space separated Tailwind CSS classes that are added to the
-              'section' element. 
+              'section' element.
             cascade: true
           col_span:
             type: number
             label: Columns Spanned
             comment: >-
               By default each column entry spans a single column. You can change
-              that here. 
+              that here.
             cascade: true
           backgroundImage:
             type: image
-            comment: Background image for the column. 
+            comment: Background image for the column.
             cascade: true
           column_components:
             type: array
             options:
               structures: _structures.content_blocks
             label: Column Components
-            comment: Stack of components in the column. 
+            comment: Stack of components in the column.
             cascade: true
             icon: splitscreen_top
       - value:
@@ -112,7 +112,7 @@ _structures:
             cascade: true
       - value:
           _bookshop_name: hero
-          title: Hello World! 
+          title: Hello World!
           content:
           tags: []
         label: Hero
@@ -121,7 +121,7 @@ _structures:
         tags:
           - Hero
           - WYSIWYG
-        _inputs: 
+        _inputs:
           title:
             type: auto
             comment: Main page h1
@@ -147,7 +147,7 @@ _structures:
         label: Content
         description: Generic rich content area
         icon: wysiwyg
-        tags: 
+        tags:
           - Text
         _inputs:
           type:
@@ -161,7 +161,7 @@ _structures:
   _bookshop_single_component_tag:
     style: select
     id_key: _bookshop_name
-    values: 
+    values:
       - value:
           _bookshop_name: tag
           text: Tag
